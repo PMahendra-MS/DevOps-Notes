@@ -1,0 +1,230 @@
+
+What are the things we have to addapt after enter into the new project ?.
+==========================================
+Understand the their process.
+Work with that process.
+Find the improvements.
+Do a simple POC -> prove it.
+Implement in Dev,SIT,UAT
+Take it PROD 
+.............................................................................................
+
+
+
+WHAT IS SDLC ?
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+SDLC (Software Development Life Cycle) is the structured process teams follow to plan, build, test, deploy, and maintain software. It breaks the work into defined phases so the result is high quality, delivered on time, and meets what the business and users need.
+
+Phases of the SDLC
+---------------------------
+. Planning: define scope, goals, budget, timeline, resources, and feasibility.
+. Requirements analysis: gather and document what the software must do (functional and non-functional requirements) with stakeholders.
+. Design: decide the architecture, database design, technology stack, UI, and security approach.
+. Development (implementation): developers write the code, usually with version control and code reviews.
+. Testing: QA verifies the software (unit, integration, system, performance, security, and user acceptance testing) and bugs are fixed.
+. Deployment: the software is released to production, manually or through CI/CD pipelines.
+. Maintenance: ongoing monitoring, bug fixes, patches, updates, and enhancements after release.
+
+*** Interview one-liner: "SDLC is the framework of phases, from planning and design through development, testing, deployment, and maintenance, that guides how software is built. In DevOps, we automate and shorten those phases with CI/CD, so each change moves from commit to production quickly and reliably."
+.............................................................................................
+
+WHAT IS Stakeholders
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Stakeholders are the people or groups who have an interest in a project or product, or who are affected by it. They can influence its direction, and its outcome matters to them. In Agile and DevOps, keeping them involved is what stops a team from building the wrong thing or shipping something the business can't support.
+
+*** Interview one-liner: "Stakeholders are anyone with an interest in the product's outcome. As a DevOps engineer, I work with developers, QA, security, product, and business teams, keeping them informed through pipeline visibility, clear release communication, and metrics, and balancing their sometimes competing priorities like speed, stability, and cost."
+
+.............................................................................................
+
+
+
+
+WHAT IS WATERFALL MODEL IN SDLC ?
+===========================================================================
+The Waterfall Model is one of the earliest and most traditional Software Development Life Cycle (SDLC) methodologies. 
+It's a linear, sequential approach where each phase must be fully completed before the next one begins— like water flowing downward through a series of steps, never going back up.
+
+The phases, in order
+-------------------------------
+Requirements Gathering
+        ↓
+System Design
+        ↓
+Implementation (Coding)
+        ↓
+Testing
+        ↓
+Deployment
+        ↓
+Maintenance
+.............................................................................................
+
+
+
+
+
+WHAT IS AGILE PROCCESS ?.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Agile is an approach to building software (and other products) in short, 
+repeated cycles instead of one long, plan-everything-upfront effort. 
+The idea is to deliver something usable early, get feedback, and adjust as you learn
+rather than committing to a fixed plan that may turn out wrong.
+
+Core ideas (from the Agile Manifesto, 2001)
+------------------------------------------------
+People and interactions over rigid processes and tools
+Working software over exhaustive documentation
+Customer collaboration over contract negotiation
+Responding to change over following a fixed plan
+
+How it typically works ?.
+-------------------------------
+. Backlog: The product owner keeps a prioritized list of features, fixes, and ideas (user stories).
+. Sprint planning: The team picks a chunk of the backlog it can finish in a short time-box, usually 1 to 4 weeks (a sprint).
+. Daily stand-up: A quick 15-minute sync: what was done, what's next, what's blocking.
+. Development and testing: Work is built, tested, and integrated continuously during the sprint.
+. Sprint review: The team demos the finished work to stakeholders and gathers feedback.
+. Retrospective: The team discusses what went well and what to improve in the next sprint.
+. Repeat: Feedback feeds back into the backlog and the cycle starts again.
+
+"" Why teams use it: faster delivery of value, earlier feedback, better handling of changing requirements, and more transparency. The trade-off is that it needs disciplined communication and active stakeholder involvement to work well.
+.............................................................................................
+
+
+
+Waterfall vs Agile
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+. Waterfall is a linear, sequential approach: requirements, design, development, testing, deployment, and maintenance happen one phase at a time, and each phase must finish before the next begins.
+. Agile is iterative: the team builds software in short sprints, delivering small working increments and adjusting based on feedback.
+
+"" Interview one-liner: "Waterfall is a sequential model with fixed requirements and a single release at the end, while Agile is iterative, delivering small increments with continuous feedback. Waterfall suits stable, regulated projects; Agile suits changing requirements, and it pairs best with DevOps and CI/CD."
+
+.............................................................................................
+
+
+
+
+
+WHAT IS AGILE WITH DEVOPS ?
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Agile and DevOps are complementary. Agile fixes the planning and collaboration problem between business and development; DevOps extends that same thinking to the delivery and operations side, so working software actually reaches users quickly and stays reliable.
+
+The gap DevOps fills.
+----------------------
+Agile teams could build and demo working software every sprint, but releasing it often still meant a slow handoff to a separate operations team, with manual deployments, environment mismatches, and long release cycles. DevOps removes that bottleneck by bringing development and operations together and automating the path to production.
+
+How they fit together
+----------------------
+Agile answers: What should we build, and how do we iterate on it with feedback? (sprints, backlog, stand-ups, retrospectives)
+
+DevOps answers: How do we build, test, deploy, and run it quickly, safely, and repeatedly? (CI/CD, automation, infrastructure as code, monitoring)
+
+Agile + DevOps in a typical flow
+---------------------------------
+. A user story is picked up from the sprint backlog.
+. The developer commits code to version control (Git).
+. A CI pipeline automatically builds it and runs unit tests, static analysis, and security   scans.
+. The build is deployed automatically to test/staging environments, where integration and other automated tests run.
+. After approval or passing quality gates, it is released to production, often with strategies like blue-green or canary deployments.
+. Monitoring and logging feed metrics and issues back to the team.
+. That feedback goes into the backlog and the next sprint's planning.
+
+** Interview one-liner:"Agile is the methodology for iterative development, and DevOps is the culture and toolchain that automates and extends it through deployment and operations. CI/CD pipelines are what make each Agile sprint's output releasable at any time."
+
+1. Highly Available (HA)
+--------------------------
+What it means: The system keeps running even when a component, server, or entire data center fails. It is measured as uptime (99.9% ≈ 8.7 hrs downtime/year; 99.99% ≈ 52 min/year).
+
+How it's achieved
+----------------------
+. No single point of failure: run multiple instances of every layer (app, database, load balancer).
+. Multiple Availability Zones (or regions): spread instances across separate data centers.
+. Load balancing: an ALB/NLB, Nginx, or a Kubernetes Service distributes traffic and stops   routing to unhealthy instances.
+ .Health checks and self-healing: failed instances or pods are automatically replaced (Kubernetes restarts pods, Auto Scaling Groups replace instances).
+. Data redundancy: database replication and failover (e.g., RDS Multi-AZ), backups, and replicated storage.
+. Safe deployments: rolling, blue-green, or canary releases to avoid downtime during releases.
+. DR planning: define RTO (how fast you recover) and RPO (how much data loss is acceptable).
+
+2. Autoscaling
+-----------------------
+What it means: The system automatically adds or removes capacity based on demand, so you handle traffic spikes without overpaying during quiet periods.
+
+Types
+------------------------
+Horizontal scaling: add or remove instances/pods (preferred in the cloud).
+Vertical scaling: increase CPU/RAM of an existing machine (has limits and often needs a restart).
+
+How it's done
+------------------------
+. AWS: Auto Scaling Groups with policies based on CPU, request count, or schedules.
+. Kubernetes: HPA (Horizontal Pod Autoscaler) scales pods on CPU/memory/custom metrics; VPA adjusts pod resource requests; Cluster Autoscaler or Karpenter adds or removes nodes.
+. Event-driven: KEDA scales on queue length, Kafka lag, and so on.
+. Scaling strategies: target tracking (keep CPU at ~60%), scheduled (known peak hours), and predictive.
+
+Best practices: keep apps stateless (so any instance can serve any request), set sensible min/max limits, define resource requests/limits, and use cooldown periods to avoid flapping.
+
+3. Security
+------------------------
+What it means: Protecting code, infrastructure, data, and access. In DevOps this is called DevSecOps: security built into every stage, not added at the end ("shift left").
+
+Key areas
+------------------------
+. In the pipeline (CI/CD):
+  . SAST (static code analysis, e.g., SonarQube)
+  . SCA/dependency scanning (e.g., Snyk, Dependabot, Trivy)
+  . Container image scanning
+  . Secrets detection in code
+  . DAST (testing the running app)
+. Access control: least privilege, IAM roles, RBAC, MFA, no shared credentials.
+. Secrets management: Vault, AWS Secrets Manager, or Kubernetes Secrets (never hard-coded in repos).
+. Network security: VPCs, private subnets, security groups, firewalls, WAF, TLS everywhere.
+. Infrastructure security: hardened images, patching, IaC scanning (Checkov, tfsec), policy as code.
+. Runtime and monitoring: audit logs, intrusion detection, alerts, vulnerability management.
+. Data protection: encryption at rest and in transit, backups.
+.............................................................................................
+
+Why We Need Multiple Environments
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Using separate environments (Dev, Test/QA, Staging, Production) lets a team build and verify changes safely before real users ever see them. Pushing code straight to production is risky: one bug, bad config, or failed migration can cause downtime, data loss, or a security incident.
+
+Dev-->Test/QA-->Staging/Pre-prod-->Production.
+
+Why they are needed
+-------------------------------
+1. Protect production: bugs and bad changes are caught before customers are affected.
+2. Isolation: developers can break things in Dev without blocking testers or users.
+3. Quality assurance: each stage adds a layer of testing (unit, integration, end-to-end, performance, security).
+4. Production-like validation: staging mirrors prod (same configs, OS, versions, infrastructure), so issues from environment differences show up early.
+5. Safe testing of risky changes: database migrations, upgrades, patching, and infrastructure changes can be rehearsed first.
+6. Parallel work: different teams can develop, test, and demo at the same time without stepping on each other.
+7. Security and compliance: production data and access stay restricted; lower environments use masked or synthetic data.
+8. Stakeholder sign-off: business users can run UAT and approve before release.
+9. Rollback and release confidence: a release that has passed through each stage is far less likely to fail.
+10 Consistent, repeatable deployments: the same artifact is promoted through environments, which proves the deployment process itself works.
+
+
+** Interview one-liner: "Multiple environments let us validate changes in stages, from Dev to QA to Staging, before they reach Production, which reduces risk, isolates work, enables proper testing and approvals, and makes releases predictable. We build once and promote the same artifact through each environment, changing only configuration."
+
+.............................................................................................
+
+
+How DevOps Solved Agile's Problems
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Agile fixed how teams plan and build software, but it stopped at "working code." Getting that code tested, deployed, and running reliably was still slow and manual. DevOps closed that gap.
+
+The core idea
+-------------------------
+Agile optimized the front half of the lifecycle (requirements to working code). DevOps optimized the back half (code to production and beyond) and connected the two into one continuous loop:
+
+Plan → Code → Build → Test → Release → Deploy → Operate → Monitor → (feedback) → Plan
+
+Before vs. after
+------------------------
+Agile only: fast development, but releases every few weeks or months, manual deployments, ops and dev in conflict.
+Agile + DevOps: every commit is built and tested automatically, releases can happen daily or even multiple times a day, and production feedback shapes the next sprint.
+
+** Interview one-liner: "Agile made development iterative, but releases and operations were still slow and siloed. DevOps solved that by automating build, test, and deployment through CI/CD, standardizing environments with IaC and containers, shifting security left, and adding monitoring for feedback, so the working software Agile produces actually reaches users quickly and reliably
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><<><><><><><><><><><><><><><><><><>
